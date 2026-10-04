@@ -1,6 +1,7 @@
 # BUDGET-TRACKER
 The budget tracker tracks income and expenses and displays a summery
 
+
 **Course:** ITP 100 Software Design & Logic
 **Author:** Samiullah Mushfiq
 **Deliverable:** Algorithm Design (IPO, Flowchart, Psuedocode)
@@ -21,10 +22,10 @@ The budget tracker tracks income and expenses and displays a summery
 
 | Input | Processing | Output |
 | :--- | :--- | :--- |
-| • `main_choice` (Integer: 1–4)<br>• `sub_choice` (Integer: 1–3)<br>•`duration` (Real / Integer: $\ge 0$) | 1. Initialize `total_cardio = 0`,`total_strength = 0`.<br>2. Loop main menu display until user enters `4`.<br>3. Validate that `main_choice` is between 1 and 4.<br>4. If `1`(Cardio) or `2` (Strength):<br>&emsp;a. Display respective submenu.<br>&emsp;b. Validate `sub_choice` is between 1 and 3.<br>&emsp;c. Prompt for duration; loop until `duration >= 0`.<br>&emsp;d. Map choice to activity name.<br>&emsp;e. Add `duration` to running total.<br>5. If `3`(Summary):<br>&emsp;a. Calculate `total_active = total_cardio + total_strength`.<br>&emsp;b. Determine goal achievement status ($>= 120$min).<br>&emsp;c. Display formatted summary report.<br>6. If `4` (Exit): Display exit farewell and terminate. | • Invalid input warning messages<br>• Success confirmation of logged minutes and activity name<br>• Formatted Activity Summary:<br>&emsp;- Total Cardio Minutes<br>&emsp;- Total Strength Minutes<br>&emsp;- Total Active Minutes<br>&emsp;- Weekly Goal Status Message<br>• Exit farewell message |
+| • `main_choice` (Integer: 1-4)<br>• `sub_choice` (Integer: 1-3)<br>• `amount` (Real: ≥ 0) | 1. Initialize income and expense totals to zero.<br>2. Display main menu until user selects Exit.<br>3. Validate main menu choices (1-4).<br>4. If Income selected:<br>  a. Display income submenu.<br>  b. Validate category choice (1-3).<br>  c. Input amount and validate amount ≥ 0.<br>  d. Add amount to total income.<br>5. If Expense selected:<br>  a. Display expense submenu.<br>  b. Validate category choice (1-3).<br>  c. Input amount and validate amount ≥ 0.<br>  d. Add amount to total expenses.<br>6. If Summary selected:<br>  a. Calculate net balance.<br>  b. Determine financial status.<br>  c. Display summary report.<br>7. Exit when user selects option 4. | • Error messages for invalid input<br>• Confirmation messages for recorded income/expense entries<br>• Financial Summary showing:<br>  - Total Income<br>  - Total Expenses<br>  - Net Balance<br>  - Financial Status Message<br>• Exit goodbye message |
+
 
 ---
-
 ## 3. Pseudocode
 
 ```
@@ -144,3 +145,5 @@ MODULE Main()
 END MODULE
 
 ```
+ 
+
